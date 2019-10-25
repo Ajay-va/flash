@@ -21,16 +21,5 @@ public class UomController {
 	{
 		return "UomRegister";
 	}
-	//save data on click submit
-	@RequestMapping(value="/save",method=RequestMethod.POST)
-	public String saveData(@ModelAttribute Uom uom,ModelMap map)
-	{
-		//call service
-		Integer id=service.saveUom(uom);
-		//constructor success message
-		String message="Uom '"+id+"'created";
-		//send message to ui
-		map.addAttribute("msg",message);
-		return "UomRegister";
-	}
+	
 }
